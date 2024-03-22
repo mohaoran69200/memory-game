@@ -7,14 +7,15 @@ body {
 /* Style du conteneur des cartes */
 .cardContainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 5px; 
+    width: 50%;
+    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */
+    grid-gap: 1px; /* Réduit encore plus l'espacement entre les cartes 1*/
 }
 
 /* Style des cartes */
 .card {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: #ccc; /* Couleur de fond par défaut */
     display: flex;
     justify-content: center;
@@ -24,7 +25,19 @@ body {
     overflow: hidden; /* Masquer le contenu débordant */
 }
 
+/* Style de l'image dans la carte */
+.card img {
+    width: 100%; /* Fait en sorte que l'image remplisse toute la carte */
+    height: auto; /* Garde la proportion de l'image */
+}
+
+
 /* Classe pour masquer le contenu des cartes (la face de la carte) */
 .hidden {
+    display: none;
+}
+
+
+.card-on {
     display: none;
 }
