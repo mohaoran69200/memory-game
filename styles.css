@@ -1,0 +1,30 @@
+body {
+    width: 100%;
+    height: auto;
+    background-color: darkgrey;
+}
+
+/* Style du conteneur des cartes */
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px; 
+}
+
+/* Style des cartes */
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc; /* Couleur de fond par défaut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Taille de la police */
+    cursor: pointer; /* Curseur de la souris */
+    overflow: hidden; /* Masquer le contenu débordant */
+}
+
+/* Classe pour masquer le contenu des cartes (la face de la carte) */
+.hidden {
+    display: none;
+}

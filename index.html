@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <!-- les 16 cases qui contiennent 2 cartes chacunes se trouvent ici -->
+    <div class="cardContainer" id="memory-grid">
+    </div>
+
+    <!-- le compteur du nombre de click -->
+    <h2 id="count">Compteur</h2>
+    <!-- le bouton pour reinitialiser et que les cartes se retournent et se remettent aleatoirement réinitialise le timer et le compteur de mouvements. -->
+    <button id="reset">Reset</button>
+    <!-- le timer avec les minutes et les secondes -->
+    <h2>Timer</h2>
+    <div id="timer">
+        <span id="minutes">Minutes</span>
+        <span id="secondes">Secondes</span>
+    </div>
+<!-- boutton sauvegarde l'état actuel du jeu dans le localStorage, incluant le placement des cartes, les cartes déjà trouvées et le temps écoulé. -->
+    <button id="save">Save</button>
+    <!-- bouton pour charger et reprendre la partie sauvegardée précédemment depuis le localStorage. -->
+    <button id="load">Load</button>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
