@@ -37,7 +37,12 @@ body {
     display: none;
 }
 
-
-.card-on {
-    display: none;
+.visible {
+    display: block;
 }
+
+
+
+/* .card-off {
+    display: none;
+} */
