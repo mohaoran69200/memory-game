@@ -8,27 +8,44 @@ body {
 .cardContainer {
     display: grid;
     width: 50%;
-    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */
-    grid-gap: 1px; /* Réduit encore plus l'espacement entre les cartes 1*/
+    grid-template-columns: repeat(4, 1fr);
+    /* Crée 4 colonnes égales */
+    grid-gap: 1px;
+    /* Réduit encore plus l'espacement entre les cartes 1*/
 }
 
-/* Style des cartes */
+/* Style de base de la carte */
 .card {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc; /* Couleur de fond par défaut */
+    width: 175px;
+    height: 175px;
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; /* Taille de la police */
-    cursor: pointer; /* Curseur de la souris */
-    overflow: hidden; /* Masquer le contenu débordant */
+    font-size: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Transition pour une animation fluide de la rotation */
+}
+
+/* Style de la carte retournée */
+.card.flipped {
+    transform: rotateY(180deg) /* Rotation de 180 degrés pour retourner la carte */
+    scaleX(-1);
+}
+
+/* Style de l'image lorsqu'elle est retournée */
+.flipped-image {
+    transform: rotateY(180deg) /* Rotation de 180 degrés pour retourner l'image */
+    scaleX(-1);
 }
 
 /* Style de l'image dans la carte */
 .card img {
-    width: 100%; /* Fait en sorte que l'image remplisse toute la carte */
-    height: auto; /* Garde la proportion de l'image */
+    width: 50%;
+    /* Fait en sorte que l'image remplisse toute la carte */
+    height: auto;
+    /* Garde la proportion de l'image */
 }
 
 
@@ -40,9 +57,3 @@ body {
 .visible {
     display: block;
 }
-
-
-
-/* .card-off {
-    display: none;
-} */
